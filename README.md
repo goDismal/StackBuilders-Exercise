@@ -23,9 +23,10 @@ Based on the last digit of the license plate, the day and hour, this system eval
 Numbers listed before can´t circulate on this restricted hours:
 
 - **Morning:** 6:00 - 9:30
-- **Morning:** 16:00 - 20:00
+- **Afternoon:** 16:00 - 20:00
 
 There is no restriction for saturday and sunday.
+There is no restriction for holidays.
 
 ## What am I using?
 
