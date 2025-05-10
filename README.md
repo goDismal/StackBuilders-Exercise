@@ -41,30 +41,33 @@ This project uses:
 
 Once you´ve cloned the repo, use the following commands
 
-- cd pico-placa-predictor
-- npm install
-- npm run dev
+	cd pico-placa-predictor
+	npm install
+	npm run dev
 
 To install Tailwind, use the following guide:
 https://tailwindcss.com/docs/installation/using-vite
 
 ## For testing
+I'm using Vitest + Testing Library for testing functions, this is the command for installation in case is needed
 
-Vitest is used for testing functions, this is the command for installation in case is needed
-
-- npm install -D vitest @testing-library/react @testing-library/jest-dom jsdom
+`npm install -D vitest @testing-library/react @testing-library/jest-dom jsdom`
 
 And here is a helpful video to understand the process:
 https://www.youtube.com/watch?v=Ysv_3OQYOMg
 
-Don't forget to add this in your package.json if you are creating a new app:
+> [!IMPORTANT]
+> Don't forget to add this in your package.json if you are creating a new app:
+```javascript
 "scripts": {
-"dev": "vite",
-"build": "vite build",
-"preview": "vite preview",
-"test": "vitest"
-}
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "vitest"
+  }
+```
 
-Finally, you can execute testing with:
 
-- npm run test
+And now, you can execute testing with:
+
+`npm run test`
