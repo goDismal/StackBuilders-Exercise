@@ -9,6 +9,14 @@ const PredictorForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    // Validate the plate format
+    const plateRegex = /^[A-Z]{3}-\d{3,4}$/;
+    if (!plateRegex.test(plate.trim().toUpperCase())) {
+      setResult('❌ Invalid plate format. Use XXX-123 or XXX-1234');
+      return;
+    }
+
     const allowed = canDrive(plate, date, time);
     setResult(allowed ? '✅ Able to drive' : '❌ Not able to drive');
   };
@@ -19,7 +27,7 @@ const PredictorForm = () => {
         <label className="block font-light">Plate number</label>
         <input
           type="text"
-          placeholder="Ej. PBX-1234"
+          placeholder="ABC-1234"
           value={plate}
           onChange={(e) => setPlate(e.target.value)}
           required
